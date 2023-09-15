@@ -29,13 +29,13 @@ class Param {
 }
 
 String vCardEncode(String s) =>
-    s.replaceAll(',', '\\,').replaceAll(';', '\\;').replaceAll('\n', '\\n');
+    s.replaceAll(',', '\,').replaceAll(';', '\;').replaceAll('\n', '\n');
 
 class VCardParser {
   String encode(String s) => s
-      .replaceAll('\\,', '&fluttercontactscomma&')
-      .replaceAll('\\;', '&fluttercontactssemicolon&')
-      .replaceAll('\\n', '&fluttercontactsnewline&');
+      .replaceAll('\,', '&fluttercontactscomma&')
+      .replaceAll('\;', '&fluttercontactssemicolon&')
+      .replaceAll('\n', '&fluttercontactsnewline&');
 
   String decode(String s) => s
       .replaceAll('&fluttercontactscomma&', ',')
